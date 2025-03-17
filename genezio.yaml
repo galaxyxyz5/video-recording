@@ -1,6 +1,7 @@
-name: video-recording
-version: 1.0.0
-entry: dist/index.js
 build: tsc
 deploy:
-  provider: genezio
+    provider: genezio
+entry: dist/index.js
+name: video-recording
+region: us-east-1
+version: 1.0.0
