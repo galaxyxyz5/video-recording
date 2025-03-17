@@ -1,6 +1,6 @@
 backend:
     functions:
-        - entry: app.js
+        - entry: app.ts
           handler: app
           name: video-recording-function
           path: ./
