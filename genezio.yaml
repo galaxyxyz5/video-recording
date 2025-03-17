@@ -7,10 +7,10 @@ backend:
     language:
         name: js
     path: dist
-scripts:
-  deploy: 
-    - npm install
-    - npm run build
 name: video-recording
 region: us-east-1
+scripts:
+    deploy:
+        - npm install
+        - npm run build
 yamlVersion: 2
