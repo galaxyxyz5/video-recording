@@ -1,11 +1,6 @@
-backend:
-	path: .
-	publish: dist
-	scripts:
-		build:
-			- npm run build
-		deploy:
-			- npm install
-	subdomain: video-recording
 name: video-recording
-yamlVersion: 2
+version: 1.0.0
+entry: dist/index.js
+build: tsc
+deploy:
+  provider: genezio
