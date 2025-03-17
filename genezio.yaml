@@ -1,16 +1,11 @@
-backend:
-    functions:
-        - entry: ./app.js
-          handler: app
-          name: video-recording-function
-          path: ./
-    language:
-        name: js
-    path: ./dist
 name: video-recording
-region: us-east-1
-scripts:
-    deploy:
-        - npm install
-        - npm run build
-yamlVersion: 2
+version: 1.0.0
+backend:
+  path: ./
+  language:
+    name: nodejs
+    packageManager: npm
+  functions:
+    - name: video-recording
+      path: ./
+      entry: dist/app.js
