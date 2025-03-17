@@ -3,6 +3,7 @@ backend:
         - entry: ./app.js
           handler: app
           name: video-recording-function
+          path: ./
     language:
         name: js
     path: dist
