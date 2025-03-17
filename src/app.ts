@@ -13,3 +13,5 @@ app.use('/api', recordingRouter);
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+export const handler = app
