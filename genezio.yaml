@@ -6,7 +6,7 @@ backend:
           path: ./
     language:
         name: js
-    path: ./dist
+    path: dist
 name: video-recording
 region: us-east-1
 yamlVersion: 2
