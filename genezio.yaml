@@ -1,11 +1,12 @@
-name: video-recording
-version: 1.0.0
 backend:
-  path: ./
-  language:
-    name: nodejs
-    packageManager: npm
-  functions:
-    - name: video-recording
-      path: ./
-      entry: dist/app.js
+    functions:
+        - entry: dist/app.js
+          name: video-recording
+          path: ./
+    language:
+        name: nodejs
+        packageManager: npm
+    path: ./
+name: video-recording
+region: us-east-1
+version: 1.0.0
