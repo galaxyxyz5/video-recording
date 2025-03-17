@@ -6,7 +6,7 @@ backend:
           path: ./
     language:
         name: js
-    path: ./
+    path: ./src
 name: video-recording
 region: us-east-1
 scripts:
