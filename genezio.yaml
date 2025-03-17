@@ -1,0 +1,11 @@
+backend:
+	path: .
+	publish: dist
+	scripts:
+		build:
+			- npm run build
+		deploy:
+			- npm install
+	subdomain: video-recording
+name: video-recording
+yamlVersion: 2
