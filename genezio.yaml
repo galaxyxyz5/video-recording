@@ -1,12 +1,12 @@
+backend:
+    functions:
+        - entry: index.js
+          handler: app
+          name: video-recording-function
+          path: ./
+    language:
+        name: js
+    path: ./dist
 name: video-recording
 region: us-east-1
 yamlVersion: 2
-backend:
-  path: ./dist
-  language:
-    name: js
-  functions:
-    - name: video-recording-function
-      path: ./
-      handler: app
-      entry: index.js 
