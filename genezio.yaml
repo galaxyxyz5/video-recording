@@ -1,16 +1,16 @@
 backend:
     functions:
-        - entry: app.ts
+        - entry: app.js
           handler: app
           name: video-recording-function
           path: ./
     language:
         name: js
-    path: ./src
+    path: ./dist
 name: video-recording
 region: us-east-1
 scripts:
-    deploy:
+    build:
         - npm install
         - npm run build
 yamlVersion: 2
