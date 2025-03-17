@@ -1,12 +1,12 @@
 backend:
     functions:
-        - entry: dist/app.js
+        - entry: app.js
           name: video-recording
-          path: ./
+          path: ./dist
     language:
         name: nodejs
         packageManager: npm
-    path: ./
+    path: ./dist
 name: video-recording
 region: us-east-1
 version: 1.0.0
