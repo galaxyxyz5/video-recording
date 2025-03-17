@@ -1,7 +1,12 @@
-build: tsc
-deploy:
-    provider: genezio
-entry: dist/index.js
 name: video-recording
 region: us-east-1
-version: 1.0.0
+yamlVersion: 2
+backend:
+  path: ./dist
+  language:
+    name: js
+  functions:
+    - name: video-recording-function
+      path: ./
+      handler: app
+      entry: index.js 
