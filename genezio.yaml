@@ -6,12 +6,11 @@ backend:
           path: ./
     language:
         name: js
-    path: ./dist
+    path: ./
 name: video-recording
 region: us-east-1
 scripts:
     deploy:
-        - mkdir dist
         - npm install
         - npm run build
 yamlVersion: 2
