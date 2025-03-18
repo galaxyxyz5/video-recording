@@ -1,18 +1,18 @@
+backend:
+    functions:
+        - entry: dist/app.js
+          handler: handler
+          name: video-recording
+          path: ./
+          typr: httpServer
+    language:
+        name: js
+        packageManager: npm
+    path: .
+    scripts:
+        deploy:
+            - npm install
+            - npm run build
 name: video-recording
 region: us-east-1
 yamlVersion: 2
-backend:
-  path: .
-  language:
-    name: js
-    packageManager: npm
-  functions:
-    - name: video-recording
-      path: ./
-      handler: handler
-      entry: dist/app.js
-      typr: httpServer
-  scripts:
-    deploy:
-      - npm install
-      - npm run build
