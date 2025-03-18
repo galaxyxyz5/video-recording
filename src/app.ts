@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const corsOptions = {
-  origin: ['http://localhost:4200', 'https://video-recording-app.app.genez.io/'],
+  origin: ['http://localhost:4200', 'https://video-recording-app.app.genez.io'],
   methods: 'GET, HEAD, PUT, PATCH, POST, DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
