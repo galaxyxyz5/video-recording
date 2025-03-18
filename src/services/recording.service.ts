@@ -14,15 +14,16 @@ export class RecordingService {
         fs.mkdirSync(this.finalDir, { recursive: true });
     }
 
-    async saveChunk(file: Express.Multer.File, sessionId: string): Promise<string> {
-        const sessionDir = path.join(this.chunksDir, sessionId);
+    async saveChunk(file: Express.Multer.File, target: string, sessionId: string): Promise<string> {
+        const sessionDir = path.join(this.chunksDir, target, sessionId);
         fs.mkdirSync(sessionDir, { recursive: true });
+        fs.mkdirSync(path.join(this.finalDir, target), { recursive: true });
         return file.path;
     }
 
-    async finalizeRecording(sessionId: string): Promise<string> {
-        const sessionDir = path.join(this.chunksDir, sessionId);
-        const outputPath = path.join(this.finalDir, `${sessionId}.mp4`);
+    async finalizeRecording(target: string, sessionId: string): Promise<string> {
+        const sessionDir = path.join(this.chunksDir, target, sessionId);
+        const outputPath = path.join(this.finalDir, target, `${sessionId}.mp4`);
         const fileList = path.join(sessionDir, 'files.txt');
 
         const chunks = fs.readdirSync(sessionDir)

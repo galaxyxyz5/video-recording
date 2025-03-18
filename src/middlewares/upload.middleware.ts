@@ -9,9 +9,9 @@ const storage = multer.diskStorage({
 		file: Express.Multer.File,
 		callback: (error: Error | null, destination: string) => void
 	) {
-		const sessionId = req.params.sessionId;
+		const { sessionId, target } = req.params;
 		console.log('sessionId:', sessionId);
-		const dir = path.join(__dirname, '..', 'uploads', 'chunks', sessionId);
+		const dir = path.join(__dirname, '..', 'uploads', 'chunks', target, sessionId);
 		fs.mkdirSync(dir, { recursive: true });
 		callback(null, dir);
 	},

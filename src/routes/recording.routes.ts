@@ -4,7 +4,7 @@ import { saveChunk, finalizeRecording } from '../controllers/recording.controlle
 
 const router = Router();
 
-router.post('/recordings/chunk/:sessionId', upload.single('video'), saveChunk);
-router.post('/recordings/finalize', finalizeRecording);
+router.post('/recordings/:target/chunk/:sessionId', upload.single('video'), saveChunk);
+router.post('/recordings/:target/finalize', finalizeRecording);
 
 export default router;
